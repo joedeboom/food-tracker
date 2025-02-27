@@ -50,18 +50,18 @@ food-product-tracker
    source venv/bin/activate
    ```
 
-3. Clone the repository and navigate into it:
+3. Clone the repository and navigate into it
    ```
    git clone https://github.com/joedeboom/food-tracker.git
    cd food-product-tracker
    ``` 
 
-4. Install the required dependencies:
+4. Install the required dependencies
    ```
    pip install -r requirements.txt
    ```
 
-5. Run the application:
+5. Run the application
    ```
    python run.py
    ```
