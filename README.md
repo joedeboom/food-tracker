@@ -1,6 +1,6 @@
 # Food Product Tracker
 
-Food Product Tracker is a web application that lets you track food products by entering their barcodes. It retrieves product details from the Open Food Facts API, saves the information to a SQLite database, and displays a searchable list of products.
+Food Product Tracker is a web application that lets you track food products by entering their barcodes. It retrieves product details from the Open Food Facts API, saves the information to a SQL database, and displays a searchable list of products.
 
 ## Features
 
@@ -73,10 +73,9 @@ food-product-tracker
 - Enter a barcode in the input field and submit the form to fetch product details.
 - The product information will be saved in the database and displayed on the homepage.
 
-## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+## Roadmap
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
+- Add search, sorting, and filtering functionality of products in the database.
+- Add camera functionality to scan real barcodes.
+- Generate shopping lists from previously scanned products.
