@@ -45,9 +45,16 @@ food-product-tracker
    ```
 
 2. Create a python virtual environment and activate it
+   **For Linux and macOS:**
    ```
    python3 -m venv venv
    source venv/bin/activate
+   ```
+
+   **For Windows (Command Prompt):**
+   ```
+   python3 -m venv venv
+   venv\Scripts\activate
    ```
 
 3. Clone the repository and navigate into it
