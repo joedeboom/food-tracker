@@ -1,12 +1,12 @@
 # Food Product Tracker
 
-Food Product Tracker is a web application that lets you track food products by entering their barcodes. It retrieves product details from the Open Food Facts API, saves the information to a SQL database, and displays a searchable list of products.
+Food Product Tracker is a web application that lets you track food products by entering their barcodes. It retrieves product details from the Open Food Facts API, saves the information to an SQL database, and displays a searchable list of products.
 
 ## Features
 
 - **Barcode Input:** Easily input product barcodes.
 - **API Integration:** Fetches detailed product data from the [Open Food Facts API](https://world.openfoodfacts.org/).
-- **Data Persistence:** Saves product information using SQLite.
+- **Data Persistence:** Saves product information using SQLAlchemy.
 - **Responsive Interface:** Displays products in a user-friendly layout.
 
 ## Project Structure
@@ -48,7 +48,7 @@ food-product-tracker
    ```
    python3 -m venv venv
    source venv/bin/activate
-
+   ```
 
 3. Clone the repository and navigate into it:
    ```
