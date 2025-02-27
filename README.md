@@ -52,7 +52,7 @@ food-product-tracker
 
 3. Clone the repository and navigate into it:
    ```
-   git clone <repository-url>
+   git clone https://github.com/joedeboom/food-tracker.git
    cd food-product-tracker
    ``` 
 
