@@ -13,45 +13,60 @@ Food Product Tracker is a web application that lets you track food products by e
 
 ```
 food-product-tracker
+├── .gitignore
 ├── app
 │   ├── __init__.py          # Initializes the Flask application
 │   ├── database.py          # Handles database connections and operations
-│   ├── food_data.py         # Fetches product data from the API
-│   ├── routes.py            # Defines application routes
-│   └── templates            # Contains HTML templates
-│       ├── base.html        # Base template for the application
-│       └── index.html       # Main template for the homepage
-├── static                   # Contains static files (CSS, JS)
-│   ├── css
-│   │   └── style.css        # Styles for the application
-│   └── js
-│       └── main.js          # JavaScript for client-side interactivity
+│   ├── food_data.py         # Fetches product data from the Open Food Facts API
+│   ├── models.py            # Defines the SQLAlchemy models (e.g. [`Product`](app/models.py))
+│   ├── routes.py            # Defines application routes, including detail and delete routes (see [`main.product_detail`](app/routes.py))
+│   ├── utils.py             # Utility functions (e.g. [`product_tuple_to_dict`](app/utils.py))
+│   ├── static               # Contains static assets
+│   │   ├── css
+│   │   │   └── style.css    # Styles for the application
+│   │   └── js
+│   │       └── main.js      # JavaScript for client-side interactivity
+│   └── templates            # Contains HTML templates for the application
+│       ├── base.html        # Base HTML template
+│       ├── index.html       # Homepage template displaying the product list
+│       ├── product_detail.html  # Detailed product view template
+│       └── error.html       # Error page template
 ├── config.py                # Configuration settings for the application
-├── requirements.txt         # Lists project dependencies
-├── run.py                   # Entry point to run the application
 ├── products.db              # SQLite database file for storing product information
-└── README.md                # Project documentation
+├── README.md                # Project documentation
+├── requirements.txt         # Lists project dependencies
+└── run.py                   # Application entry point
 ```
 
 ## Installation
+1. Navigate to a directory of your preference
+   ```
+   cd ~/projects
+   ```
 
-1. Clone the repository:
+2. Create a python virtual environment and activate it
+   ```
+   python3 -m venv venv
+   source venv/bin/activate
+
+
+3. Clone the repository and navigate into it:
    ```
    git clone <repository-url>
    cd food-product-tracker
-   ```
+   ``` 
 
-2. Install the required dependencies:
+4. Install the required dependencies:
    ```
    pip install -r requirements.txt
    ```
 
-3. Run the application:
+5. Run the application:
    ```
    python run.py
    ```
 
-4. Open your web browser and navigate to `http://127.0.0.1:5000` to access the application.
+6. Open your web browser and navigate to `http://127.0.0.1:5000` to access the application.
 
 ## Usage
 
