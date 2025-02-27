@@ -45,6 +45,7 @@ food-product-tracker
    ```
 
 2. Create a python virtual environment and activate it
+
    **For Linux and macOS:**
    ```
    python3 -m venv venv
