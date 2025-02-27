@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="barcode-input">
+        <input type="text" id="barcode-input" placeholder="Enter Barcode" required>
+        <button id="fetch-product-btn">Fetch Product</button>
+    </div>
+
+    <h2>Product List</h2>
+    <ul class="product-list">
+        {% for product in products %}
+            <li>
+                <a href="{{ url_for('main.product_detail', barcode=product.barcode) }}" class="product-link">
+                    <strong>{{ product.product_name }}</strong> - {{ product.brand }}<br>
+                    <img src="{{ product.image_url }}" alt="{{ product.product_name }}" width="100"><br>
+                    Ingredients: {{ product.ingredients }}<br>
+                    Allergens: {{ product.allergens }}<br>
+                    Calories: {{ product.calories }}<br>
+                </a>
+                <form action="{{ url_for('main.delete_product', barcode=product.barcode) }}" method="POST" class="delete-form" onsubmit="return confirm('Are you sure you want to delete this product?');">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="delete-btn-small">Delete</button>
+                </form>
+                <hr>
+            </li>
+        {% else %}
+            <li>No products found.</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<script>
+document.getElementById('fetch-product-btn').addEventListener('click', function() {
+    const barcode = document.getElementById('barcode-input').value;
+    if (barcode) {
+        // Construct URL using current origin to ensure we get the right path
+        const url = window.location.origin + '/add_product?barcode=' + encodeURIComponent(barcode);
+        console.log("Navigating to:", url); // Debug log
+        window.location.href = url;
+    }
+});
+</script>
+{% endblock %}
