@@ -26,7 +26,7 @@
                 </tr>
                 <tr>
                     <th>Allergens</th>
-                    <td>{{ product.allergens }}</td>
+                    <td>{{ product.allergens|format_allergens if product.allergens else "Unknown" }}</td>
                 </tr>
                 <tr>
                     <th>Store</th>

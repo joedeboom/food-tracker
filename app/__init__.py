@@ -23,7 +23,8 @@ def configure_logging(app):
     logging.getLogger('app.database').setLevel(app.config.get('DB_LOG_LEVEL', log_level))
     
     app.logger.info(f"Logging configured at level: {logging.getLevelName(log_level)}")
-    return app
+
+
 
 def create_app():
     app = Flask(__name__)
@@ -34,6 +35,10 @@ def create_app():
     
     # Configure logging
     configure_logging(app)
+    
+    # Register custom template filters
+    from app.utils import format_allergens
+    app.jinja_env.filters['format_allergens'] = format_allergens
     
     # Add CSRFProtect
     from flask_wtf.csrf import CSRFProtect
