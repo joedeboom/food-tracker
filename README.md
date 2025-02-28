@@ -41,6 +41,7 @@ food-product-tracker
 ## Installation
 1. Navigate to a directory of your preference
    ```
+   mkdir ~/projects
    cd ~/projects
    ```
 
