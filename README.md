@@ -73,7 +73,7 @@ food-product-tracker
 3. Clone the repository and navigate into it:
    ```
    git clone https://github.com/joedeboom/food-tracker.git
-   cd food-product-tracker
+   cd food-tracker
    ``` 
 
 4. Install the required dependencies:
@@ -86,7 +86,7 @@ food-product-tracker
    python run.py
    ```
 
-6. Open your web browser and navigate to `http://127.0.0.1:5000` to access the application.
+6. Open your web browser and navigate to `http://127.0.0.1:51515` to access the application.
 
 ## Usage
 
