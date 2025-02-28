@@ -38,14 +38,25 @@ food-product-tracker
 └── run.py                   # Application entry point
 ```
 
+## Recommended for MacOS: Install Homebrew, python and pip
+1. Install Homebrew:
+    ```
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+
+2. Install python using Homebrew, which also inlcudes pip:
+    ```
+    brew install python
+    ```
+
 ## Installation
-1. Navigate to a directory of your preference
+1. Navigate to a directory of your preference:
    ```
    mkdir ~/projects
    cd ~/projects
    ```
 
-2. Create a python virtual environment and activate it
+2. Create a python virtual environment and activate it:
 
    **For Linux and macOS:**
    ```
@@ -59,18 +70,18 @@ food-product-tracker
    venv\Scripts\activate
    ```
 
-3. Clone the repository and navigate into it
+3. Clone the repository and navigate into it:
    ```
    git clone https://github.com/joedeboom/food-tracker.git
    cd food-product-tracker
    ``` 
 
-4. Install the required dependencies
+4. Install the required dependencies:
    ```
    pip install -r requirements.txt
    ```
 
-5. Run the application
+5. Run the application:
    ```
    python run.py
    ```
